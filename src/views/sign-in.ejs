@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partials/head %>
+  <title>
+    <%=title%>
+  </title>
+</head>
+
+<body>
+  <% include ./partials/nav-logged %>
+  <% include ./partials/master-head %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <div class="panel-body main">
+            <div class="row">
+              <div class="col-md-2 col-sm-3 text-center">
+                Sign In
+                <form name="signUpForm" action="/auth/sign-in" method="post">
+                  Username: <input name="username" id="username" />
+                  Password: <input name="password" id="password" />
+                  <input type="submit" value="Sign In" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% include ./partials/social %>
+  <% include ./partials/footer %>
+  <% include ./partials/default-scripts %>
+</body>
+
+</html>

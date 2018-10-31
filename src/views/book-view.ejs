@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partials/head %>
+  <title>
+    <%=title%>
+  </title>
+</head>
+
+<body>
+  <% include ./partials/nav-logged %>
+  <% include ./partials/master-head %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="row">
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title" href="#">
+                  <img alt="" src="<%=book.details.image_url%>" style="width:100px;height:100px">
+                </a>
+              </div>
+              <div class="col-md-10 col-sm-9">
+                <h3>
+                  <%=book.title%>
+                </h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="label label-default">
+                        <%=book.author%></span></h4>
+                  </div>
+                  <div class="col-xs-3"></div>
+                </div>
+                <br>
+                <%-book.details.description%><br>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% include ./partials/social %>
+  <% include ./partials/footer %>
+  <% include ./partials/default-scripts %>
+</body>
+
+</html>
